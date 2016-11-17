@@ -1421,28 +1421,116 @@
             "dist": {
                 "type": "path",
                 "url": "/home/manel/Code/scool/enrollment_mobile",
-                "reference": "02e0a353b38eea3ac2373ed56f75a37c4bc3d02c",
+                "reference": "e4019f286c3fabc79c15eaa6db686e5fe602ee82",
                 "shasum": null
             },
             "require": {
                 "fzaninotto/faker": "^1.6",
-                "laravel/framework": "^5.3"
+                "laravel/framework": "^5.3",
+                "php": "~5.6|~7.0",
+                "scool/foundation": "^0.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "squizlabs/php_codesniffer": "^2.3"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "Scool\\Enrollment_mobile\\": "src"
+                    "Scool\\Enrollment\\": "src"
                 }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Scool\\Enrollment\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "check-style": [
+                    "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ],
+                "fix-style": [
+                    "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ]
             },
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Manel",
-                    "email": "manelgavalda@iesebre.com"
+                    "name": "Manel Gavaldà",
+                    "email": "manelgavalda@iesebre.com",
+                    "homepage": "https://github.com/manelgavalda",
+                    "role": "Developer"
                 }
+            ],
+            "description": "Package enrollment_mobile for scool project",
+            "homepage": "https://github.com/scool/enrollment_mobile",
+            "keywords": [
+                "enrollment_mobile",
+                "scool"
             ]
+        },
+        {
+            "name": "scool/foundation",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acacha-scool/foundation.git",
+                "reference": "a9aea12de9c1d0ab5539b49321ea8d6b90206e53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acacha-scool/foundation/zipball/a9aea12de9c1d0ab5539b49321ea8d6b90206e53",
+                "reference": "a9aea12de9c1d0ab5539b49321ea8d6b90206e53",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.3",
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Scool\\Foundation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "https://github.com/acacha",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Foundation classes for Scool",
+            "homepage": "https://github.com/acacha-scool/foundation",
+            "keywords": [
+                "Scool",
+                "foundation"
+            ],
+            "time": "2016-11-17 20:03:50"
         },
         {
             "name": "swiftmailer/swiftmailer",
