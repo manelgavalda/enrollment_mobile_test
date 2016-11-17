@@ -1,11 +1,6 @@
 {
     "version": 2,
     "paths": [
-        "../enrollment_mobile",
-        "../enrollment_mobile",
-        "../enrollment_mobile",
-        "../enrollment_mobile",
-        "../enrollment_mobiled",
-        "../enrollment_mobile"
+        "/home/manel/Code/scool/enrollment_mobile"
     ]
 }
