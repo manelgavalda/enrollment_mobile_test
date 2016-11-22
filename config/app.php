@@ -167,7 +167,7 @@ return [
          * Package Service Providers...
          */
 
-        Scool\Enrollment\Providers\EnrollmentServiceProvider::class,
+        Scool\EnrollmentMobile\Providers\EnrollmentMobileServiceProvider::class,
 
         /*
          * Application Service Providers...
