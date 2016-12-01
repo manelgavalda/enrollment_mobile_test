@@ -13,6 +13,10 @@ use App\Repositories\EnrollmentRepository;
 use App\Validators\EnrollmentValidator;
 
 
+/**
+ * Class EnrollmentsController
+ * @package App\Http\Controllers
+ */
 class EnrollmentsController extends Controller
 {
 
@@ -26,6 +30,11 @@ class EnrollmentsController extends Controller
      */
     protected $validator;
 
+    /**
+     * EnrollmentsController constructor.
+     * @param EnrollmentRepository $repository
+     * @param EnrollmentValidator $validator
+     */
     public function __construct(EnrollmentRepository $repository, EnrollmentValidator $validator)
     {
         $this->repository = $repository;

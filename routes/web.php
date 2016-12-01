@@ -15,8 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::resource('enrollments', 'EnrollmentsController');
+
+});
 
 Route::get('/test', function () {
     $study = new Study();
     dd($study);
 });
+
