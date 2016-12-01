@@ -166,7 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Scool\Foundation\Providers\FoundationServiceProvider::class,
         Scool\EnrollmentMobile\Providers\EnrollmentMobileServiceProvider::class,
 
         /*
