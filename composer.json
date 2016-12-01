@@ -12,7 +12,8 @@
         "acacha/admin-lte-template-laravel": "dev-master",
         "acacha/names": "dev-master",
         "scool/foundation": "dev-master",
-        "scool/enrollment_mobile": "dev-master"
+        "scool/enrollment_mobile": "dev-master",
+        "prettus/l5-repository": "^2.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

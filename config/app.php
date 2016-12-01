@@ -168,6 +168,7 @@ return [
          */
         Scool\Foundation\Providers\FoundationServiceProvider::class,
         Scool\EnrollmentMobile\Providers\EnrollmentMobileServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
 
         /*
          * Application Service Providers...
