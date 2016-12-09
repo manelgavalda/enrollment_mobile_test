@@ -169,6 +169,7 @@ return [
         Scool\Foundation\Providers\FoundationServiceProvider::class,
         Scool\EnrollmentMobile\Providers\EnrollmentMobileServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
 
 
         /*
