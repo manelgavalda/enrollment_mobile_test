@@ -21,12 +21,13 @@ Route::group(['middleware' => 'auth'], function () {
         return view('tokens');
     });
 
-    Route::resource('enrollments', 'EnrollmentsController');
 
-});
 
-Route::get('/test', function () {
-    $study = new Study();
-    dd($study);
+
+//Route::get('/test', function () {
+//    $study = new Study();
+//    dd($study);
+
+Route::resource('enrollments', 'EnrollmentsController');
 });
 
