@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'auth'], function () {
 
+    Route::get('/profile/tokens', function () {
+        return view('tokens');
+    });
+
     Route::resource('enrollments', 'EnrollmentsController');
 
 });
