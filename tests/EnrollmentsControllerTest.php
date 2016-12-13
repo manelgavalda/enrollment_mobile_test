@@ -17,7 +17,7 @@ class EnrollmentsControllerTest extends TestCase
 
     protected function login()
     {
-        $user = factory(\Scool\EnrollmentMobile\Models\Enrollment::class,50)->create();
+        $user = factory(App\User::class)->create();
         $this->actingAs($user);
     }
 
