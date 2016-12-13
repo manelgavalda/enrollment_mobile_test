@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Scool\EnrollmentMobile\Models\Enrollment;
 use Scool\EnrollmentMobile\Repositories\EnrollmentRepository;
 
 /**
@@ -55,12 +56,28 @@ class EnrollmentsControllerTest extends TestCase
         $this->assertRedirectedTo('login');
 
     }
+
+    private function createDummyEnrollments()
+    {
+
+        $enrollments = [
+            $enrollment1 = new Enrollment(),
+            $enrollment2 = new Enrollment(),
+            $enrollment3 = new Enrollment(),
+        ];
+    }
+
     public function testIndex()
     {
         //Fase 1 : preparació -> isolation/mocking
         $this->login();
-        $this->repository->shouldReceive('all')->once()->andReturn(collect([]));
+        $this->repository->shouldReceive('all')->once()->andReturn(
+            $this->createDummyEnrollments()
+        );
 
+        $this->repository->shouldReceive('pushCriteria')->once();
+
+        $this->app->instance(EnrollmentRepository::class, $this->repository);
 //        dd(route('enrollments.index'));
         $this->get('enrollments');
         $this->assertResponseOk();
@@ -69,7 +86,8 @@ class EnrollmentsControllerTest extends TestCase
 
         $enrollments = $this->response->getOriginalContent()->getData()['enrollments'];
 
-        $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $enrollments);
+        $this->assertInstanceOf(\Illuminate\Support\Collection::class, $enrollments);
+        $this->assertEquals(count($enrollments));
     }
 
     public function testStore()
