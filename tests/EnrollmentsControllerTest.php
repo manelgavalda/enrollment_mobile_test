@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Scool\EnrollmentMobile\Repositories\EnrollmentRepository;
 
 /**
  * Class EnrollmentsControllerTest
@@ -11,9 +12,22 @@ class EnrollmentsControllerTest extends TestCase
 {
 
     use DatabaseMigrations;
-    /**
-     *
-     */
+
+    //S'executa al començar els testos.
+    protected $repository;
+
+    public function setUp()
+    {
+
+        $this->repository= Mockery::mock(EnrollmentRepository::class);
+        //$this->login();
+    }
+
+    //S'executa al finalitzar els testos
+    public function tearDown()
+    {
+        Mockery::close();
+    }
 
     protected function login()
     {
@@ -41,6 +55,9 @@ class EnrollmentsControllerTest extends TestCase
     }
     public function testIndex()
     {
+        //Fase 1 : preparació -> isolation/mocking
+        $this->login();
+        $this->repository->shouldReceive('all')->once()->andReturn(collect([]));
 
 //        dd(route('enrollments.index'));
         $this->get('enrollments');
