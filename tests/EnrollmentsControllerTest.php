@@ -16,7 +16,9 @@ class EnrollmentsControllerTest extends TestCase
     //S'executa al començar els testos.
     protected $repository;
 
-    public function setUp()
+
+
+    public function construct()
     {
 
         $this->repository= Mockery::mock(EnrollmentRepository::class);
@@ -65,7 +67,7 @@ class EnrollmentsControllerTest extends TestCase
 
         $this->assertViewHas('enrollments');
 
-        $enrollments= $this->response->getOriginalContent()->getData()['enrollments'];
+        $enrollments = $this->response->getOriginalContent()->getData()['enrollments'];
 
         $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $enrollments);
     }
