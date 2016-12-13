@@ -15,6 +15,12 @@ class EnrollmentsControllerTest extends TestCase
      *
      */
 
+    protected function login()
+    {
+        $user = factory(\Scool\EnrollmentMobile\Models\Enrollment::class,50)->create();
+        $this->actingAs($user);
+    }
+
     public function createApplication()
     {
         $app = require __DIR__.'/../bootstrap/app.php';
@@ -26,13 +32,31 @@ class EnrollmentsControllerTest extends TestCase
         return $app;
     }
 
-    public function testsIndex()
+
+    public function testIndexNotLogged()
+    {
+        $this->get('enrollments');
+        $this->assertRedirectedTo('login');
+
+    }
+    public function testIndex()
     {
 
 //        dd(route('enrollments.index'));
-        $user = factory(App\User::class)->create();
-        $this->actingAs($user);
-        $this->get('enrollments')->dump();
+        $this->get('enrollments');
         $this->assertResponseOk();
+
+        $this->assertViewHas('enrollments');
+
+        $enrollments= $this->response->getOriginalContent()->getData()['enrollments'];
+
+        $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $enrollments);
+    }
+
+    public function testStore()
+    {
+        $this->login();
+        $this->assertRedirectedToRoute(route('enrollments.create'));
+        $this->post('enrollments')->dump();
     }
 }
