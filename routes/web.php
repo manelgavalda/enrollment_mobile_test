@@ -28,6 +28,6 @@ Route::group(['middleware' => 'auth'], function () {
 //    $study = new Study();
 //    dd($study);
 
-Route::resource('enrollments', 'EnrollmentsController');
+//Route::resource('enrollments', 'EnrollmentsController');
 });
 
