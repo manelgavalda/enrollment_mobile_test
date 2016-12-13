@@ -169,7 +169,7 @@ return [
         Scool\Foundation\Providers\FoundationServiceProvider::class,
         Scool\EnrollmentMobile\Providers\EnrollmentMobileServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        Laravel\Passport\PassportServiceProvider::class,
+        //Laravel\Passport\PassportServiceProvider::class,
 
 
         /*
@@ -180,7 +180,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\RepositoryServiceProvider::class,
+        //App\Providers\RepositoryServiceProvider::class,
 
         /*
          * Acacha Llum Service Providers...
