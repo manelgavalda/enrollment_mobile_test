@@ -60,7 +60,7 @@ class EnrollmentsControllerTest extends TestCase
     private function createDummyEnrollments()
     {
 
-        $enrollments = [
+        return $enrollments = [
             $enrollment1 = new Enrollment(),
             $enrollment2 = new Enrollment(),
             $enrollment3 = new Enrollment(),
