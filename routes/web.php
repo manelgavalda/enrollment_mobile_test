@@ -29,5 +29,8 @@ Route::group(['middleware' => 'auth'], function () {
 //    dd($study);
 
 //Route::resource('enrollments', 'EnrollmentsController');
+//    Stats::of(Scool\EnrollmentMobile\Models\Enrollment::class);
+//    return Stats::total();
+
 });
 
