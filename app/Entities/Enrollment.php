@@ -12,5 +12,5 @@ class Enrollment extends Model implements Transformable
     use TransformableTrait,Nameable;
 
     protected $fillable = ['name'];
-com
+    //TODO: mirar estats (enrollment). Implementar i definir estats(exemple porta(esborrany,valida,feta).
 }
