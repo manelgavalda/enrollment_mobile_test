@@ -1,6 +1,7 @@
 {
     "version": 2,
     "paths": [
-        "/home/manel/Code/scool/enrollment_mobile"
+        "../enrollment_mobile",
+        "../stateful-eloquent"
     ]
 }
