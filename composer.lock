@@ -160,9 +160,14 @@
         {
             "name": "acacha/stateful-eloquent",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acacha/stateful-eloquent.git",
+                "reference": "8b973aa58f86932c4dab5f5d5f3046f10a862b1b"
+            },
             "dist": {
                 "type": "path",
-                "url": "../stateful-eloquent",
+                "url": "https://api.github.com/repos/acacha/stateful-eloquent/zipball/8b973aa58f86932c4dab5f5d5f3046f10a862b1b",
                 "reference": "8b973aa58f86932c4dab5f5d5f3046f10a862b1b",
                 "shasum": null
             },
