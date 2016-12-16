@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 
 /**
- * Class DatabaseSeeder
+ * Class DatabaseSeeder.
  */
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-    $this->call(ManelSeeder::class);
+        $this->call(AdminUserSeeder::class);
     }
 }
