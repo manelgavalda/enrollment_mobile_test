@@ -1,7 +1,6 @@
 {
     "version": 2,
     "paths": [
-        "../enrollment_mobile",
-        "../stateful-eloquent"
+        "../enrollment_mobile"
     ]
 }
