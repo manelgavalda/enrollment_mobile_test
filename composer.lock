@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/acacha/adminlte-laravel.git",
-                "reference": "60f6bb294167f1233b4a64ee6503e46b67f84b63"
+                "reference": "d6c0d32ea8131868c5328f3c2ed04ab947db0258"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/60f6bb294167f1233b4a64ee6503e46b67f84b63",
-                "reference": "60f6bb294167f1233b4a64ee6503e46b67f84b63",
+                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/d6c0d32ea8131868c5328f3c2ed04ab947db0258",
+                "reference": "d6c0d32ea8131868c5328f3c2ed04ab947db0258",
                 "shasum": ""
             },
             "require": {
@@ -69,7 +69,7 @@
                 "template",
                 "theme"
             ],
-            "time": "2016-12-14 16:55:04"
+            "time": "2016-12-16 12:00:24"
         },
         {
             "name": "acacha/helpers",
@@ -2275,8 +2275,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "/home/manel/Code/scool/enrollment_mobile",
-                "reference": "de5b05b263be17f2846cde508d7d72d7e6ed6083",
+                "url": "../enrollment_mobile",
+                "reference": "887e90f0e296bb9ad2370b8956099a403f8952e6",
                 "shasum": null
             },
             "require": {
