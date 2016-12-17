@@ -30,11 +30,11 @@
                                 <tr>
                                     <td>{{$enrollment->id}}</td>
                                     <td>{{$enrollment->name}}</td>
-                                    <td> {{$enrollment->validated}}</td>
-                                    <td> {{$enrollment->finished}}</td>
-                                    <td> {{$enrollment->study_id}}</td>
-                                    <td> {{$enrollment->course_id}}</td>
-                                    <td> {{$enrollment->classroom_id}}</td>
+                                    <td>{{$enrollment->validated}}</td>
+                                    <td>{{$enrollment->finished}}</td>
+                                    <td>{{$enrollment->study_id}}</td>
+                                    <td>{{$enrollment->course_id}}</td>
+                                    <td>{{$enrollment->classroom_id}}</td>
                                 </tr>
                             @endforeach
 
