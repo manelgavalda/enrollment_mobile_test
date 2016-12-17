@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Scool\EnrollmentMobile\Database\Seeds\EnrollmentMobileSeeder;
 
 /**
  * Class DatabaseSeeder.
@@ -15,5 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(AdminUserSeeder::class);
+        //Added enrollments seeder.
+        $this->call(EnrollmentMobileSeeder::class);
     }
 }
