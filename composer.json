@@ -16,7 +16,8 @@
         "acacha/stateful-eloquent": "dev-master",
         "prettus/l5-repository": "^2.6",
         "laravel/passport": "^1.0",
-        "spatie/laravel-permission": "^1.5"
+        "spatie/laravel-permission": "^1.5",
+        "doctrine/dbal": "~2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
