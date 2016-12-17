@@ -17,12 +17,24 @@
                             <tr>
                                 <th style="width: 10px">#</th>
                                 <th>Name</th>
+                                <th>Validated</th>
+                                <th>Finished</th>
+                                <th>Study id</th>
+                                <th>Course id</th>
+                                <th>Classroom id</th>
+
                             </tr>
                             </thead>
                             <tbody>
                             @foreach ($enrollments as $enrollment)
                                 <tr>
                                     <td>{{$enrollment->id}}</td>
+                                    <td>{{$enrollment->name}}</td>
+                                    <td> {{$enrollment->validated}}</td>
+                                    <td> {{$enrollment->finished}}</td>
+                                    <td> {{$enrollment->study_id}}</td>
+                                    <td> {{$enrollment->course_id}}</td>
+                                    <td> {{$enrollment->classroom_id}}</td>
                                 </tr>
                             @endforeach
 
