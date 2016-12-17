@@ -167,7 +167,7 @@ return [
          * Package Service Providers...
          */
         Scool\Foundation\Providers\FoundationServiceProvider::class,
-        Scool\EnrollmentMobile\Providers\EnrollmentMobileServiceProvider::class,
+        Scool\EnrollmentMobile\Providers\PaymentsServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
 
