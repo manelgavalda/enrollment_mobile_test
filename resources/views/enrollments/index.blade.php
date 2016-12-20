@@ -37,7 +37,11 @@
                             <!-- text input -->
                             {{ csrf_field() }}
 
-                            <input type="hidden" name="enrollment_id" value="1">
+                            <input type="hidden" name="validated" value="1">
+                            <input type="hidden" name="finished" value="1">
+                            <input type="hidden" name="study_id" value="1">
+                            <input type="hidden" name="course_id" value="1">
+                            <input type="hidden" name="classroom_id" value="1">
 
                             @php
                                 $warning="";
@@ -96,6 +100,11 @@
                             <tr>
                                 <th style="width: 10px">#</th>
                                 <th>Name</th>
+                                <th>Validated</th>
+                                <th>Finished</th>
+                                <th>study_id</th>
+                                <th>course_id</th>
+                                <th>classroom_id</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -103,11 +112,11 @@
                                 <tr>
                                     <td> {{ $enrollment->id  }} </td>
                                     <td> {{ $enrollment->name }} </td>
-                                    <td> {{$enrollment->validated}} </td>
-                                    <td> {{$enrollment->finished}} </td>
-                                    <td> {{$enrollment->enrollment_id}} </td>
-                                    <td> {{$enrollment->course_id}} </td>
-                                    <td> {{$enrollment->classroom_id}} </td>
+                                    <td> {{ $enrollment->validated }} </td>
+                                    <td> {{ $enrollment->finished }} </td>
+                                    <td> {{ $enrollment->study_id }} </td>
+                                    <td> {{ $enrollment->course_id }} </td>
+                                    <td> {{ $enrollment->classroom_id }} </td>
                                 </tr>
                             @endforeach
 
