@@ -249,7 +249,6 @@ return [
          */
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
         #llum_aliases
 
     ],
