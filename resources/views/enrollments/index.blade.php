@@ -15,8 +15,7 @@
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                             </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
-                            </button>
+
                         </div>
                         <!-- /.box-tools -->
                     </div>
@@ -33,7 +32,7 @@
                             Something is wrong!
                         </div>
 
-                        <form role="form" action="/enrollments" method="post">
+                        <form role="form" action="/enrollments" method="post" id="createEnrollment">
                             <!-- text input -->
                             {{ csrf_field() }}
 
@@ -58,7 +57,6 @@
                                     @endforeach
                                 </div>
 
-                            <input type="submit" value="create">
 
                             <!-- input states -->
                             {{--<div class="form-group has-success">--}}
@@ -79,7 +77,7 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button class="btn btn-primary" type="submit">Create</button>
+                        <button class="btn btn-primary" onclick="document.getElementById('createEnrollment').submit();" type="submit">Create</button>
                     </div>
                 </div>
 
