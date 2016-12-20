@@ -55,7 +55,7 @@
                                     <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name">
                                     @foreach ($errors->get('name') as $message)
                                         <span class="help-block"> {{ $message }}</span>
-                                    @endforeachgit
+                                    @endforeach
                                 </div>
 
                             <input type="submit" value="create">
