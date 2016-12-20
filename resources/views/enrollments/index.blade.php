@@ -52,7 +52,7 @@
 
                                 <div class="form-group {{ $warning }}">
                                     <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i>Name</label>
-                                    <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name">
+                                    <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name" value="{{old('name')}}">
                                     @foreach ($errors->get('name') as $message)
                                         <span class="help-block"> {{ $message }}</span>
                                     @endforeach
