@@ -39,23 +39,20 @@
 
                             <input type="hidden" name="enrollment_id" value="1">
 
-                            @if ($errors->has('name'))
-                                <div class="form-group has-warning">
+                            @php
+                                $warning="";
+                                if ($errors->has('name')) {
+                                    $warning="has-warning";
+                                }
+                            @endphp
+
+                                <div class="form-group {{ $warning }}">
                                     <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i>Name</label>
                                     <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name">
                                     @foreach ($errors->get('name') as $message)
                                         <span class="help-block"> {{ $message }}</span>
                                     @endforeach
                                 </div>
-                            @else
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" placeholder="Name" name="name">
-                                </div>
-                            @endif
-
-
-
 
                             <input type="submit" value="create">
 
@@ -104,8 +101,8 @@
                             <tbody>
                             @foreach ($enrollments as $enrollment)
                                 <tr>
-                                    <td>{{ $enrollment->id  }}</td>
-                                    <td>{{ $enrollment->name }}</td>
+                                    <td> {{ $enrollment->id  }} </td>
+                                    <td> {{ $enrollment->name }} </td>
                                     <td> {{$enrollment->validated}} </td>
                                     <td> {{$enrollment->finished}} </td>
                                     <td> {{$enrollment->enrollment_id}} </td>
