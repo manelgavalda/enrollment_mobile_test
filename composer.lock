@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/acacha/adminlte-laravel.git",
-                "reference": "d6c0d32ea8131868c5328f3c2ed04ab947db0258"
+                "reference": "24cdb0a338133c7de39c7c902c011c8e03a9b447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/d6c0d32ea8131868c5328f3c2ed04ab947db0258",
-                "reference": "d6c0d32ea8131868c5328f3c2ed04ab947db0258",
+                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/24cdb0a338133c7de39c7c902c011c8e03a9b447",
+                "reference": "24cdb0a338133c7de39c7c902c011c8e03a9b447",
                 "shasum": ""
             },
             "require": {
@@ -69,20 +69,20 @@
                 "template",
                 "theme"
             ],
-            "time": "2016-12-16 12:00:24"
+            "time": "2016-12-19 13:23:04"
         },
         {
             "name": "acacha/helpers",
-            "version": "0.1.0",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acacha/helpers.git",
-                "reference": "2628bc8ede26fc3fd52bdd5c333cf2bb911a5945"
+                "reference": "35a60fe05d8007a77833b530479daa7ab7e5794f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acacha/helpers/zipball/2628bc8ede26fc3fd52bdd5c333cf2bb911a5945",
-                "reference": "2628bc8ede26fc3fd52bdd5c333cf2bb911a5945",
+                "url": "https://api.github.com/repos/acacha/helpers/zipball/35a60fe05d8007a77833b530479daa7ab7e5794f",
+                "reference": "35a60fe05d8007a77833b530479daa7ab7e5794f",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,7 @@
                 "helpers",
                 "laravel"
             ],
-            "time": "2016-12-07 14:12:12"
+            "time": "2016-12-19 11:05:08"
         },
         {
             "name": "acacha/names",
@@ -160,11 +160,6 @@
         {
             "name": "acacha/stateful-eloquent",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/acacha/stateful-eloquent.git",
-                "reference": "8b973aa58f86932c4dab5f5d5f3046f10a862b1b"
-            },
             "dist": {
                 "type": "path",
                 "url": "https://api.github.com/repos/acacha/stateful-eloquent/zipball/8b973aa58f86932c4dab5f5d5f3046f10a862b1b",
@@ -208,8 +203,7 @@
                 "eloquent",
                 "laravel",
                 "statemachine"
-            ],
-            "time": "2016-11-20 19:10:25"
+            ]
         },
         {
             "name": "acacha/user",
@@ -1189,28 +1183,28 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "2693c101803ca78b27972d84081d027fca790a1e"
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/2693c101803ca78b27972d84081d027fca790a1e",
-                "reference": "2693c101803ca78b27972d84081d027fca790a1e",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -1236,7 +1230,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-11-18 17:47:58"
+            "time": "2016-12-20 10:07:11"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -2679,16 +2673,18 @@
             "dist": {
                 "type": "path",
                 "url": "../enrollment_mobile",
-                "reference": "119cb4e0370dceaab352a23388c147dc3c96b1aa",
+                "reference": "58f732b21043ddd8e2af867f082d9bd9433854a7",
                 "shasum": null
             },
             "require": {
                 "acacha/names": "dev-master",
+                "acacha/stateful-eloquent": "dev-master",
                 "fzaninotto/faker": "^1.6",
                 "laravel/framework": "^5.3",
                 "php": "~5.6|~7.0",
                 "prettus/l5-repository": "^2.6",
-                "scool/foundation": "dev-master"
+                "scool/foundation": "dev-master",
+                "spatie/laravel-permission": "^1.5"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0||~5.0",
