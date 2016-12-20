@@ -33,4 +33,3 @@ Route::group(['middleware' => 'auth'], function () {
 //    return Stats::total();
 
 });
-
