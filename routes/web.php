@@ -20,6 +20,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile/tokens', function () {
         return view('tokens');
     });
+    #adminlte_routes
 
 
 
