@@ -4,6 +4,6 @@
 $factory->define(Scool\EnrollmentMobile\Models\Speciality::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word,
-        'code' => $faker->numberBetween(500,699)
+        'code' => $faker->numberBetween(500, 699)
     ];
 });

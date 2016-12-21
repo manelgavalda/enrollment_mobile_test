@@ -93,7 +93,11 @@ class EnrollmentsControllerTest extends TestCase
     public function testStore()
     {
         $this->login();
-        $this->assertRedirectedToRoute(route('enrollments.create'));
+        $this->assertRedirectedToRoute(route('enrollments.index'));
         $this->post('enrollments')->dump();
+        //assertSessionHas de message, al store,update
     }
+     //amb name buit per que peti.
+    //validacio de testStore validation fails this->assertSessionHasErrors(['name']);
+    // TOTS els testos mockejats.
 }
