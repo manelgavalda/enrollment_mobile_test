@@ -108,15 +108,6 @@
                             <tbody>
                             @foreach ($enrollments as $enrollment)
                                 <tr>
-<<<<<<< HEAD
-                                    <td>{{$enrollment->id}}</td>
-                                    <td>{{$enrollment->name}}</td>
-                                    <td>{{$enrollment->validated}}</td>
-                                    <td>{{$enrollment->finished}}</td>
-                                    <td>{{$enrollment->study_id}}</td>
-                                    <td>{{$enrollment->course_id}}</td>
-                                    <td>{{$enrollment->classroom_id}}</td>
-=======
                                     <td> {{ $enrollment->id  }} </td>
                                     <td> {{ $enrollment->name }} </td>
                                     <td> {{ $enrollment->validated }} </td>
@@ -124,7 +115,6 @@
                                     <td> {{ $enrollment->study_id }} </td>
                                     <td> {{ $enrollment->course_id }} </td>
                                     <td> {{ $enrollment->classroom_id }} </td>
->>>>>>> c694c4c9812adafb0221c0dcfed7b9c5127e8147
                                 </tr>
                             @endforeach
 
