@@ -98,11 +98,6 @@
                             <tr>
                                 <th style="width: 10px">#</th>
                                 <th>Name</th>
-                                <th>Validated</th>
-                                <th>Finished</th>
-                                <th>Study_id</th>
-                                <th>Course_id</th>
-                                <th>Classroom_id</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -110,11 +105,6 @@
                                 <tr>
                                     <td> {{ $classroom->id  }} </td>
                                     <td> {{ $classroom->name }} </td>
-                                    <td> {{ $classroom->validated }} </td>
-                                    <td> {{ $classroom->finished }} </td>
-                                    <td> {{ $classroom->study_id }} </td>
-                                    <td> {{ $classroom->course_id }} </td>
-                                    <td> {{ $classroom->classroom_id }} </td>
                                 </tr>
                             @endforeach
 
