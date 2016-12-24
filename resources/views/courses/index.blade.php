@@ -1,7 +1,7 @@
 @extends('adminlte::layouts.app')
 
 @section('htmlheader_title')
-    Classrooms
+    Courses
 @endsection
 @section('main-content')
     <div class="container-fluid spark-screen">
@@ -35,12 +35,6 @@
                         <form role="form" action="/courses" method="post" id="createCourse">
                             <!-- text input -->
                             {{ csrf_field() }}
-
-                            <input type="hidden" name="validated" value="1">
-                            <input type="hidden" name="finished" value="1">
-                            <input type="hidden" name="study_id" value="1">
-                            <input type="hidden" name="course_id" value="1">
-                            <input type="hidden" name="course_id" value="1">
 
                             @php
                                 $warning="";

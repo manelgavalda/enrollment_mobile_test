@@ -32,15 +32,9 @@
                             {{--Something is wrong!--}}
                         {{--</div>--}}
 
-                        <form role="form" action="/classrooms" method="post" id="createEnrollment">
+                        <form role="form" action="/classrooms" method="post" id="createClassroom">
                             <!-- text input -->
                             {{ csrf_field() }}
-
-                            <input type="hidden" name="validated" value="1">
-                            <input type="hidden" name="finished" value="1">
-                            <input type="hidden" name="study_id" value="1">
-                            <input type="hidden" name="course_id" value="1">
-                            <input type="hidden" name="classroom_id" value="1">
 
                             @php
                                 $warning="";
@@ -77,7 +71,7 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button class="btn btn-primary" onclick="document.getElementById('createEnrollment').submit();" type="submit">Create</button>
+                        <button class="btn btn-primary" onclick="document.getElementById('createClassroom').submit();" type="submit">Create</button>
                     </div>
                 </div>
 
@@ -118,63 +112,3 @@
         </div>
     </div>
 @endsection
-
-
-
-{{--@section('main-content')--}}
-    {{--<div class="container-fluid spark-screen">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-md-8 col-md-offset-2">--}}
-                {{--<div class="panel panel-default">--}}
-                    {{--<div class="panel-heading">Classrooms</div>--}}
-                    {{--<div class="panel-body">--}}
-                        {{--<table class="table table-bordered">--}}
-                            {{--<thead>--}}
-                            {{--<tr>--}}
-                                {{--<th style="width: 10px">#</th>--}}
-                                {{--<th>Name</th>--}}
-                                {{--<th>Validated</th>--}}
-                                {{--<th>Finished</th>--}}
-                                {{--<th>classroom id</th>--}}
-                                {{--<th>Course id</th>--}}
-                                {{--<th>Classroom id</th>--}}
-
-                            {{--</tr>--}}
-                            {{--</thead>--}}
-                            {{--<tbody>--}}
-                            {{--@foreach($error->get('email') as $message)--}}
-
-                            {{--@endforeach--}}
-                            {{--<form role="form" action="/classrooms" method="post">--}}
-                                {{--{{ csrf_field() }}--}}
-
-                                {{--<input type="hidden" name="classroom_id" value="1">--}}
-                                {{--@if ($errors->has('name'))--}}
-                                    {{--<div class="form-group has-warning">--}}
-                                        {{--<label class="control-label" for="inputWarning">--}}
-
-                                        {{--</label>--}}
-                                    {{--</div>--}}
-                            {{--</form>--}}
-
-                            {{--@foreach ($classrooms as $classroom)--}}
-                                {{--<tr>--}}
-                                    {{--<td> {{$classroom->id}} </td>--}}
-                                    {{--<td> {{$classroom->name}} </td>--}}
-                                    {{--<td> {{$classroom->validated}} </td>--}}
-                                    {{--<td> {{$classroom->finished}} </td>--}}
-                                    {{--<td> {{$classroom->classroom_id}} </td>--}}
-                                    {{--<td> {{$classroom->course_id}} </td>--}}
-                                    {{--<td> {{$classroom->classroom_id}} </td>--}}
-                                {{--</tr>--}}
-                            {{--@endforeach--}}
-
-                            {{--</tbody>--}}
-
-                        {{--</table>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--@endsection--}}
