@@ -26,6 +26,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 
+
 //Route::get('/test', function () {
 //    $study = new Study();
 //    dd($study);
