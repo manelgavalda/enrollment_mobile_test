@@ -189,7 +189,7 @@ shadowSize and lineWidth are derived as well from the points series.
             //parse
             var errRanges = parseErrors(s, i);
 
-            //cycle xerr & yerr
+            //cycles xerr & yerr
             for (var e = 0; e < err.length; e++){
 
                 var minmax = [ax[e].min, ax[e].max];
