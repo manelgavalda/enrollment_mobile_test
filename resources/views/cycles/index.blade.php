@@ -91,14 +91,12 @@
                             <thead>
                             <tr>
                                 <th style="width: 10px">#</th>
-                                <th>Name</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach ($cycles as $cycle)
                                 <tr>
                                     <td> {{ $cycle->id  }} </td>
-                                    <td> {{ $cycle->name }} </td>
                                 </tr>
                             @endforeach
 
