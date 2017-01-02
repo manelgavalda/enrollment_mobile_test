@@ -21,11 +21,13 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
+                        @if (Session::has('message'))
                         <div class="alert alert-success alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                             <h4><i class="icon fa fa-check"></i> Done!</h4>
-                            enrollment create ok!
+                            {{ session('message') }}
                         </div>
+                        @endif
                         {{--<div class="alert alert-danger alert-dismissible">--}}
                             {{--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>--}}
                             {{--<h4><i class="icon fa fa-check"></i> Oops!</h4>--}}
