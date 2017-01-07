@@ -59,21 +59,6 @@
                                     @endforeach
                                 </div>
 
-
-                            <!-- input states -->
-                            {{--<div class="form-group has-success">--}}
-                            {{--<label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> Input with success</label>--}}
-                            {{--<input type="text" class="form-control" id="inputSuccess" placeholder="Enter ...">--}}
-                            {{--<span class="help-block">Help block with success</span>--}}
-                            {{--</div>--}}
-
-                            {{--<div class="form-group has-error">--}}
-                            {{--<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> Input with--}}
-                            {{--error</label>--}}
-                            {{--<input type="text" class="form-control" id="inputError" placeholder="Enter ...">--}}
-                            {{--<span class="help-block">Help block with error</span>--}}
-                            {{--</div>--}}
-
                         </form>
                     </div>
 
