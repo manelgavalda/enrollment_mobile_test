@@ -100,11 +100,12 @@
                             <tr>
                                 <th style="width: 10px">#</th>
                                 <th>Name</th>
-                                <th>Validated</th>
-                                <th>Finished</th>
-                                <th>Study_id</th>
-                                <th>Course_id</th>
-                                <th>Classroom_id</th>
+                                <th>Buttons</th>
+                                {{--<th>Validated</th>--}}
+                                {{--<th>Finished</th>--}}
+                                {{--<th>Study_id</th>--}}
+                                {{--<th>Course_id</th>--}}
+                                {{--<th>Classroom_id</th>--}}
                             </tr>
                             </thead>
                             <tbody>
@@ -112,11 +113,12 @@
                                 <tr>
                                     <td> {{ $enrollment->id  }} </td>
                                     <td> {{ $enrollment->name }} </td>
-                                    <td> {{ $enrollment->validated }} </td>
-                                    <td> {{ $enrollment->finished }} </td>
-                                    <td> {{ $enrollment->study_id }} </td>
-                                    <td> {{ $enrollment->course_id }} </td>
-                                    <td> {{ $enrollment->classroom_id }} </td>
+                                    <td> {{ }} </td>
+                                    {{--<td> {{ $enrollment->validated }} </td>--}}
+                                    {{--<td> {{ $enrollment->finished }} </td>--}}
+                                    {{--<td> {{ $enrollment->study_id }} </td>--}}
+                                    {{--<td> {{ $enrollment->course_id }} </td>--}}
+                                    {{--<td> {{ $enrollment->classroom_id }} </td>--}}
                                 </tr>
                             @endforeach
 
