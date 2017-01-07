@@ -113,7 +113,10 @@
                                 <tr>
                                     <td> {{ $enrollment->id  }} </td>
                                     <td> {{ $enrollment->name }} </td>
-                                    <td> {{ }} </td>
+                                    <td>
+                                        <i class="fa fa-edit" style="font-size:20px;color:blue;" aria-hidden="true"/>
+                                        <i class='fa fa-fw fa-trash' style="font-size:20px;color:red;" aria-hidden="true"/>
+                                    </td>
                                     {{--<td> {{ $enrollment->validated }} </td>--}}
                                     {{--<td> {{ $enrollment->finished }} </td>--}}
                                     {{--<td> {{ $enrollment->study_id }} </td>--}}
