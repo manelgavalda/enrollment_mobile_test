@@ -114,8 +114,10 @@
                                     <td> {{ $enrollment->id  }} </td>
                                     <td> {{ $enrollment->name }} </td>
                                     <td>
-                                        <i class="fa fa-edit" style="font-size:20px;color:blue;" aria-hidden="true"/>
-                                        <i class='fa fa-fw fa-trash' style="font-size:20px;color:red;" aria-hidden="true"/>
+                                        <form action="/enrollments/{{$enrollment->id}}" method=POST>
+                                            {{ csrf_field() }}
+                                            <button name="_method" value="DELETE" class="btn btn-danger"><i class="fa fa-fw fa-trash"></i></button>
+                                        </form>
                                     </td>
                                     {{--<td> {{ $enrollment->validated }} </td>--}}
                                     {{--<td> {{ $enrollment->finished }} </td>--}}
