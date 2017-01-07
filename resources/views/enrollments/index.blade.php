@@ -110,7 +110,7 @@
                         {{--Something is wrong!--}}
                         {{--</div>--}}
 
-                        <form role="form" action="/enrollments/{{$id=25}}" method="post" id="updateEnrollment">
+                        <form role="form" action="/enrollments/{{$id=0}}" method="post" id="updateEnrollment">
                             <!-- text input -->
                             {{ csrf_field() }}
 
@@ -131,7 +131,8 @@
 
                             <div class="form-group {{ $warning }}">
                                 <label class="control-label" for="inputWarning"><i class="fa fa-pencil"></i>Id</label>
-                                <input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">
+                                {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name" value="{{old('name')}}">
                                 @foreach ($errors->get('name') as $message)
                                     <span class="help-block"> {{ $message }}</span>
                                 @endforeach
