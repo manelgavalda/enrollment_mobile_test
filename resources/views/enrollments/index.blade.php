@@ -110,7 +110,7 @@
                         {{--Something is wrong!--}}
                         {{--</div>--}}
 
-                        <form role="form" action="/enrollments/{{$id=1}}" method="post" id="updateEnrollment">
+                        <form role="form" action="/enrollments/{{$id=25}}" method="post" id="updateEnrollment">
                             <!-- text input -->
                             {{ csrf_field() }}
 
