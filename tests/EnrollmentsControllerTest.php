@@ -16,13 +16,14 @@ class EnrollmentsControllerTest extends TestCase
 
     //S'executa al començar els testos.
     protected $repository;
-
+    protected $response;
 
 
     public function construct()
     {
 
         $this->repository= Mockery::mock(EnrollmentRepository::class);
+        //$this->response= Mockery::mock(EnrollmentRepository::class);
         //$this->login();
     }
 
@@ -87,7 +88,7 @@ class EnrollmentsControllerTest extends TestCase
         $enrollments = $this->response->getOriginalContent()->getData()['enrollments'];
 
         $this->assertInstanceOf(\Illuminate\Support\Collection::class, $enrollments);
-        $this->assertEquals(count($enrollments));
+        $this->assertEquals(count($enrollments),2);
     }
 
     public function testStore()
