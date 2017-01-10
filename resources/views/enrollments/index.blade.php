@@ -7,6 +7,13 @@
     <div class="container-fluid spark-screen">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                @if (Session::has('message'))
+                    <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-check"></i> Done!</h4>
+                        {{ session('message') }}
+                    </div>
+                @endif
 
                 <div class="box box-default">
                     <div class="box-header with-border">
@@ -21,13 +28,13 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        @if (Session::has('message'))
-                        <div class="alert alert-success alert-dismissible">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h4><i class="icon fa fa-check"></i> Done!</h4>
-                            {{ session('message') }}
-                        </div>
-                        @endif
+                        {{--@if (Session::has('message'))--}}
+                        {{--<div class="alert alert-success alert-dismissible">--}}
+                            {{--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>--}}
+                            {{--<h4><i class="icon fa fa-check"></i> Done!</h4>--}}
+                            {{--{{ session('message') }}--}}
+                        {{--</div>--}}
+                        {{--@endif--}}
 
                         <form role="form" action="/enrollments" method="post" id="createEnrollment">
                             <!-- text input -->
@@ -77,15 +84,15 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        @if (Session::has('message'))
-                            <div class="alert alert-success alert-dismissible">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                <h4><i class="icon fa fa-check"></i> Done!</h4>
-                                {{ session('message') }}
-                            </div>
-                        @endif
-
-                        <form role="form" action="/enrollments/{{$id=1}}" method="post" id="updateEnrollment">
+                        {{--@if (Session::has('message'))--}}
+                            {{--<div class="alert alert-success alert-dismissible">--}}
+                                {{--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>--}}
+                                {{--<h4><i class="icon fa fa-check"></i> Done!</h4>--}}
+                                {{--{{ session('message') }}--}}
+                            {{--</div>--}}
+                        {{--@endif--}}
+                        {{$id=2}}
+                        <form role="form" action="/enrollments/{{$id}}" method="post" id="updateEnrollment">
                             <!-- text input -->
                             {{ csrf_field() }}
 
