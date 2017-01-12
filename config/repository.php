@@ -231,6 +231,7 @@ return [
             'presenters'   => 'Presenters',
             'validators'   => 'Validators',
             'controllers'  => 'Http/Controllers',
+            'requests'      => 'Http/Requests',
             'provider'     => 'PaymentsServiceProvider',
             'criteria'     => 'Criteria',
             'stubsOverridePath' => app_path()
