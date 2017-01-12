@@ -22,6 +22,8 @@
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                             </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                            </button>
 
                         </div>
                         <!-- /.box-tools -->
@@ -78,6 +80,8 @@
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                             </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                            </button>
 
                         </div>
                         <!-- /.box-tools -->
@@ -91,13 +95,13 @@
                                 {{--{{ session('message') }}--}}
                             {{--</div>--}}
                         {{--@endif--}}
-                        {{$id=2}}
-                        <form role="form" action="/enrollments/{{$id}}" method="post" id="updateEnrollment">
+
+                        {{--{{$id=2}}--}}
+
+                        <form role="form" action="/enrollments/3" method="post" id="updateEnrollment">
                             <!-- text input -->
                             {{ csrf_field() }}
-
                             <input type="hidden" name="_method" value="PUT">
-
                             <input type="hidden" name="validated" value="1">
                             <input type="hidden" name="finished" value="1">
                             <input type="hidden" name="study_id" value="1">
@@ -111,7 +115,7 @@
                                 }
                             @endphp
 
-                            <div class="form-group {{ $warning }}">
+                            <div class="form-group @{{ current}}">
                                 <label class="control-label" for="inputWarning"><i class="fa fa-pencil"></i>Id</label>
                                 {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
                                 <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name" value="{{old('name')}}">
