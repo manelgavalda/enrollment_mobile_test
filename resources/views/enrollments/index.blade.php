@@ -116,7 +116,7 @@
                             @endphp
 
                             <div class="form-group @{{ current}}">
-                                <label class="control-label" for="inputWarning"><i class="fa fa-pencil"></i>Id</label>
+                                <label class="control-label" for="inputWarning"><i class="fa fa-pencil"></i>Name</label>
                                 {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
                                 <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name" value="{{old('name')}}">
                                 @foreach ($errors->get('name') as $message)
