@@ -219,8 +219,10 @@ return [
     |
     */
     'generator'  => [
-        'basePath'      => app_path(),
-        'rootNamespace' => 'App\\',
+        'basePath'      => base_path().'/vendor/scool/enrollment_mobile/src',
+        'databasePath'  => base_path(). '/vendor/scool/enrollment_mobile/database',
+        'rootNamespace' => 'Scool\\EnrollmentMobile\\',
+        'stubsOverridePath' => app_path(),
         'paths'         => [
             'models'       => 'Entities',
             'repositories' => 'Repositories',
@@ -229,7 +231,7 @@ return [
             'presenters'   => 'Presenters',
             'validators'   => 'Validators',
             'controllers'  => 'Http/Controllers',
-            'provider'     => 'RepositoryServiceProvider',
+            'provider'     => 'CurriculumServiceProvider',
             'criteria'     => 'Criteria',
             'stubsOverridePath' => app_path()
         ]

@@ -2,6 +2,7 @@
     "version": 2,
     "paths": [
         "../enrollment_mobile",
-        "../stateful-eloquent"
+        "../stateful-eloquent",
+        "../l5-repository"
     ]
 }
