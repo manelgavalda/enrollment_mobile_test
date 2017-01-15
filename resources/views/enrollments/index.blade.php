@@ -150,7 +150,7 @@
                             <tr>
                                 <th style="width: 10px">#</th>
                                 <th>Name</th>
-                                <th>Buttons</th>
+                                <th>Actions</th>
                                 {{--<th>Validated</th>--}}
                                 {{--<th>Finished</th>--}}
                                 {{--<th>Study_id</th>--}}
