@@ -15,7 +15,7 @@
                     </div>
                 @endif
 
-                <div class="box box-default">
+                <div class="box box-default" id="createEnrollmentBox">
                     <div class="box-header with-border">
                         <h3 class="box-title">Create enrollment</h3>
 
@@ -73,9 +73,9 @@
                 </div>
 
                 {{--edit form--}}
-                <div class="box box-default" style="display: none">
+                <div class="box box-default" style="display: none" id="updateEnrollmentBox">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Update enrollment</h3>
+                        <h3 class="box-title" id="updateEnrollmentBoxTitle"></h3>
 
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -98,7 +98,7 @@
 
                         {{--{{$id=2}}--}}
 
-                        <form role="form" action="/enrollments/3" method="post" id="updateEnrollment">
+                        <form role="form" method="post" id="updateEnrollment">
                             <!-- text input -->
                             {{ csrf_field() }}
                             <input type="hidden" name="_method" value="PUT">
@@ -115,7 +115,7 @@
                                 }
                             @endphp
 
-                            <div class="form-group @{{ current}}">
+                            <div class="form-group @{{ current }}">
                                 <label class="control-label" for="inputWarning"><i class="fa fa-pencil"></i>Name</label>
                                 {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
                                 <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name" value="{{old('name')}}">
@@ -135,7 +135,7 @@
 
                 <div class="box box-default">
                     <div class="box-header with-border">
-                        <h3 class="box-title">enrollments</h3>
+                        <h3 class="box-title">Enrollments</h3>
 
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -168,13 +168,25 @@
                                             {{ csrf_field() }}
                                             <button class="btn btn-danger" name="_method" value="DELETE" ><i class="fa fa-fw fa-trash"></i></button>
                                         </form>
-                                            <button class="btn btn-primary" onclick="document.getElementById('updateEnrollment').submit();" type="submit"><i class="fa fa-fw fa-edit"></i></button>
+
+                                        <button class="btn btn-info" type="button" onclick="document.getElementById('updateEnrollmentBox').style.display = 'block';document.getElementById('createEnrollmentBox').style.display = 'none';function updateEnrollment(enrollment) {
+                                                document.getElementById('updateEnrollmentBoxTitle').innerText = 'Update enrollment ' + enrollment.id;
+                                                var Form = document.forms['updateEnrollment'];
+                                                Form.action = '/enrollments/' + enrollment.id;
+                                                Form.elements['validated'].value = enrollment.validated;
+                                                Form.elements['finished'].value = enrollment.finished;
+                                                Form.elements['study_id'].value = enrollment.study_id;
+                                                Form.elements['course_id'].value = enrollment.course_id;
+                                                Form.elements['classroom_id'].value = enrollment.classroom_id;
+                                                }
+                                                updateEnrollment({{$enrollment}})"><i class="fa fa-fw fa-edit"></i></button>
                                     </td>
                                     {{--<td> {{ $enrollment->validated }} </td>--}}
                                     {{--<td> {{ $enrollment->finished }} </td>--}}
                                     {{--<td> {{ $enrollment->study_id }} </td>--}}
                                     {{--<td> {{ $enrollment->course_id }} </td>--}}
                                     {{--<td> {{ $enrollment->classroom_id }} </td>--}}
+
                                 </tr>
                             @endforeach
 
