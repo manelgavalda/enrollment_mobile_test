@@ -73,7 +73,7 @@
                 </div>
 
                 {{--edit form--}}
-                <div class="box box-default">
+                <div class="box box-default" style="display: none">
                     <div class="box-header with-border">
                         <h3 class="box-title">Update enrollment</h3>
 
