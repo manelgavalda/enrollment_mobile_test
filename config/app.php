@@ -170,6 +170,7 @@ return [
         Scool\EnrollmentMobile\Providers\PaymentsServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
 
         /*
