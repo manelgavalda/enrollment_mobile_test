@@ -15,8 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(AdminUserSeeder::class);
         //Added enrollments seeder.
         $this->call(EnrollmentMobileSeeder::class);
+
+        $this->call(AdminUserSeeder::class);
     }
 }
