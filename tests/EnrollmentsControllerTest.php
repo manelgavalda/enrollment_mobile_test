@@ -75,9 +75,9 @@ class EnrollmentsControllerTest extends TestCase
     {
         //Fase 1 : preparació -> isolation/mocking
         $this->login();
-
-        //$this->repository->shouldReceive('pushCriteria')->once();
-
+        //dump($this->repository->shouldReceive('pushCriteria')->once());
+        $this->repository->shouldReceive('pushCriteria')->once();
+//
 //        $this->repository->shouldReceive('all')->once()->andReturn(
 //            $this->createDummyEnrollments()
 //        );
