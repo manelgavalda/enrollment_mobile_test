@@ -1,12 +1,8 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: manel
- * Date: 19/01/17
- * Time: 20:38
- */
-class EnrollmentControllerTestMock
+namespace Tests;
+
+class EnrollmentControllerTestMock extends BrowserKitTest
 {
     protected $apiResult = '[{
         "name": "Hic esse sit hic ea.",

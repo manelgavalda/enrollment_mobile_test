@@ -1,10 +1,12 @@
 <?php
 
+namespace Tests;
+
 /**
  * Class Enrollment
  * @package Scool\Curriculum
  */
-class EnrollmentMobileTest extends PHPUnit_Framework_TestCase
+class EnrollmentMobileTest extends BrowserKitTest
 {
     /**
      * Mi prova tonta

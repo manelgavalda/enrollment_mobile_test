@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests;
+
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -9,7 +11,7 @@ use Scool\EnrollmentMobile\Repositories\EnrollmentRepository;
 /**
  * Class EnrollmentsControllerTest
  */
-class EnrollmentsControllerTest extends TestCase
+class EnrollmentsControllerTest extends BrowserKitTest
 {
 
     use DatabaseMigrations;
