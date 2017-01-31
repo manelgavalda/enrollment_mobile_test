@@ -2,9 +2,9 @@
 
 namespace Tests;
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
+use App\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Mockery;
 use Scool\EnrollmentMobile\Models\Enrollment;
 use Scool\EnrollmentMobile\Repositories\EnrollmentRepository;
 
@@ -36,19 +36,8 @@ class EnrollmentsControllerTest extends BrowserKitTest
 
     protected function login()
     {
-        $user = factory(App\User::class)->create();
+        $user = factory(User::class)->create();
         $this->actingAs($user);
-    }
-
-    public function createApplication()
-    {
-        $app = require __DIR__.'/../bootstrap/app.php';
-
-        $app->make(Illuminate\Contracts\Http\Kernel::class);
-
-        $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
-
-        return $app;
     }
 
 
