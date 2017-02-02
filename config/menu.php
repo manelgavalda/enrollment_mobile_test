@@ -31,7 +31,7 @@ Menu::macro('sidebar', function () {
         #adminlte_menu
         ->add(Link::toUrl('submoduleTypes', 'SubmoduleType'))
         ->add(Link::toUrl('submodules', 'Submodule'))
-        ->add(Link::toUrl('module', 'Module'))
+        ->add(Link::toUrl('modules', 'Module'))
         ->add(Link::toUrl('families', 'Family'))
         ->add(Link::toUrl('cycles', 'Cycle'))
         ->add(Link::toUrl('enrollmentStudySubmodules', 'EnrollmentStudySubmodules'))
