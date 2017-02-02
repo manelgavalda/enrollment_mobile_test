@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/acacha/adminlte-laravel.git",
-                "reference": "ecc0af404f4a3290098f088d430bdcbe400d9282"
+                "reference": "0f55bf379ff802f21e3b2b709913a7da96291fa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/ecc0af404f4a3290098f088d430bdcbe400d9282",
-                "reference": "ecc0af404f4a3290098f088d430bdcbe400d9282",
+                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/0f55bf379ff802f21e3b2b709913a7da96291fa8",
+                "reference": "0f55bf379ff802f21e3b2b709913a7da96291fa8",
                 "shasum": ""
             },
             "require": {
@@ -69,7 +69,7 @@
                 "template",
                 "theme"
             ],
-            "time": "2017-02-01 11:11:54"
+            "time": "2017-02-02 20:12:39"
         },
         {
             "name": "acacha/helpers",
@@ -2422,7 +2422,7 @@
             "dist": {
                 "type": "path",
                 "url": "../enrollment_mobile",
-                "reference": "c0b6eef8637e9c9fa6decb7d34deb31aecd1ad28",
+                "reference": "a216dfd3dfa87e9634e2c914d21382b463236585",
                 "shasum": null
             },
             "require": {
