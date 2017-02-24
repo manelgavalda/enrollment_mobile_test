@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "17b0fbdaebd10aa609a8d3dc047d2166",
-    "content-hash": "7fbfd7058399b3b1bb48364dccdd7010",
+    "hash": "ad534bb507b936907ab959410b9b8615",
+    "content-hash": "ee7014d0fdd1969039dc11f21de96df6",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -13,15 +13,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/acacha/adminlte-laravel.git",
-                "reference": "0f55bf379ff802f21e3b2b709913a7da96291fa8"
+                "reference": "11c098f3b35e6dc3882318e9130b4d32918e9858"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/0f55bf379ff802f21e3b2b709913a7da96291fa8",
-                "reference": "0f55bf379ff802f21e3b2b709913a7da96291fa8",
+                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/11c098f3b35e6dc3882318e9130b4d32918e9858",
+                "reference": "11c098f3b35e6dc3882318e9130b4d32918e9858",
                 "shasum": ""
             },
             "require": {
+                "acacha/filesystem": "^0.1.0",
                 "acacha/helpers": "^0.1.3",
                 "acacha/user": "~0.2",
                 "creativeorange/gravatar": "~1.0",
@@ -69,7 +70,59 @@
                 "template",
                 "theme"
             ],
-            "time": "2017-02-02 20:12:39"
+            "time": "2017-02-23 12:29:25"
+        },
+        {
+            "name": "acacha/filesystem",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acacha/filesystem.git",
+                "reference": "fb22a6e51d5f0ef9a50f9dc71ceedfd32df9cdb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acacha/filesystem/zipball/fb22a6e51d5f0ef9a50f9dc71ceedfd32df9cdb7",
+                "reference": "fb22a6e51d5f0ef9a50f9dc71ceedfd32df9cdb7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Acacha\\Filesystem\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "https://github.com/acacha",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP filesystem with stubs compiler support",
+            "homepage": "https://github.com/acacha/filesystem",
+            "keywords": [
+                "acacha",
+                "filesystem"
+            ],
+            "time": "2017-02-19 14:21:00"
         },
         {
             "name": "acacha/helpers",
@@ -383,16 +436,16 @@
         },
         {
             "name": "barryvdh/laravel-ide-helper",
-            "version": "v2.2.3",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "a7fc2ec489aada6062d3a63ddc915004a21e38af"
+                "reference": "e82de98cef0d6597b1b686be0b5813a3a4bb53c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/a7fc2ec489aada6062d3a63ddc915004a21e38af",
-                "reference": "a7fc2ec489aada6062d3a63ddc915004a21e38af",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/e82de98cef0d6597b1b686be0b5813a3a4bb53c5",
+                "reference": "e82de98cef0d6597b1b686be0b5813a3a4bb53c5",
                 "shasum": ""
             },
             "require": {
@@ -415,7 +468,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -445,7 +498,7 @@
                 "phpstorm",
                 "sublime"
             ],
-            "time": "2017-01-05 21:20:42"
+            "time": "2017-02-22 12:27:33"
         },
         {
             "name": "barryvdh/reflection-docblock",
