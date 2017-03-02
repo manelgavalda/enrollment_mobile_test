@@ -14,6 +14,8 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('enrollment', require('./components/Enrollment.vue'));
+Vue.component('enrollments', require('./components/Enrollments.vue'));
 
 Vue.component(
     'passport-clients',

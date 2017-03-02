@@ -1,8 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp watch"
+    "gulp-prod": "gulp --production",
+    "gulp-dev": "gulp watch",
+    "dev": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
@@ -20,5 +24,26 @@
     "icheck": "^1.0.2",
     "ionicons": "^3.0.0",
     "toastr": "^2.1.2"
-  }
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "sweetalert2": "^6.4.2"
+  },
+  "name": "enrollment_mobile_test",
+  "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img width=\"150\"src=\"https://laravel.com/laravel.png\"></a></p>",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manelgavalda/enrollment_mobile_test.git"
+  },
+  "author": "Manel <manelgavalda@iesebre.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manelgavalda/enrollment_mobile_test/issues"
+  },
+  "homepage": "https://github.com/manelgavalda/enrollment_mobile_test#readme"
 }
