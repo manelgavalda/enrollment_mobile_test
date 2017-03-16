@@ -23,6 +23,7 @@ require('icheck');
 window.Vue = require('vue');
 require('vue-resource');
 
+window.sweetAlert = require('sweetalert2')
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
  * the outgoing requests issued by this application. The CSRF middleware
@@ -34,6 +35,10 @@ Vue.http.interceptors.push((request, next) => {
 
     next();
 });
+
+window.axios = require('axios');
+
+axios.defaults.headers.common['X-CSRF-TOKEN'] = Laravel.csrfToken;
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
