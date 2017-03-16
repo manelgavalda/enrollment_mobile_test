@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Mailgun with sandbox domain
+Route::get('mail', 'HomeController@mail');
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/profile/tokens', function () {
