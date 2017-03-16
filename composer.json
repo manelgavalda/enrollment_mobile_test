@@ -20,7 +20,8 @@
         "doctrine/dbal": "~2.3",
         "spatie/laravel-menu": "^2.0",
         "guzzlehttp/guzzle": "^6.2",
-        "laravel/browser-kit-testing": "^1.0"
+        "laravel/browser-kit-testing": "^1.0",
+        "acacha/laravel-social": "^0.1.4"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
