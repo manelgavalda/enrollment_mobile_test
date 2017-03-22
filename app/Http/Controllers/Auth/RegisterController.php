@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Manelgavalda\EnrollmentMobileTest\Http\Controllers\Auth;
 
-use App\User;
+use Manelgavalda\EnrollmentMobileTest\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use Manelgavalda\EnrollmentMobileTest\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 /**

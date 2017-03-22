@@ -5,16 +5,16 @@
  * https://github.com/laravel/framework/blob/5.3/src/Illuminate/Auth/Console/stubs/make/controllers/HomeController.stub
  */
 
-namespace App\Http\Controllers;
+namespace Manelgavalda\EnrollmentMobileTest\Http\Controllers;
 
-use App\Http\Requests;
-use App\User;
+use Manelgavalda\EnrollmentMobileTest\Http\Requests;
+use Manelgavalda\EnrollmentMobileTest\User;
 use Illuminate\Http\Request;
 use Mail;
 
 /**
  * Class HomeController
- * @package App\Http\Controllers
+ * @package Manelgavalda\EnrollmentMobileTest\Http\Controllers
  */
 class HomeController extends Controller
 {

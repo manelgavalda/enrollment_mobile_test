@@ -177,12 +177,12 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        //App\Providers\RepositoryServiceProvider::class,
+        Manelgavalda\EnrollmentMobileTest\Providers\AppServiceProvider::class,
+        Manelgavalda\EnrollmentMobileTest\Providers\AuthServiceProvider::class,
+        // Manelgavalda\EnrollmentMobileTest\Providers\BroadcastServiceProvider::class,
+        Manelgavalda\EnrollmentMobileTest\Providers\EventServiceProvider::class,
+        Manelgavalda\EnrollmentMobileTest\Providers\RouteServiceProvider::class,
+        //Manelgavalda\EnrollmentMobileTest\Providers\RepositoryServiceProvider::class,
 
         /*
          * Acacha Llum Service Providers...
