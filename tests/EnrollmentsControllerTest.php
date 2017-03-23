@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use App\User;
+use Manelgavalda\EnrollmentMobileTest\User as User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Mockery;
 use Scool\EnrollmentMobile\Models\Enrollment;
