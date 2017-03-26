@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "cross-env": "^3.2.4",
     "sweetalert2": "^6.4.2"
   },
   "name": "enrollment_mobile_test",

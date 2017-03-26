@@ -37,8 +37,13 @@ Vue.http.interceptors.push((request, next) => {
 });
 
 window.axios = require('axios');
+Vue.prototype.$http = axios;
 
-axios.defaults.headers.common['X-CSRF-TOKEN'] = Laravel.csrfToken;
+window.axios.defaults.headers.common = {
+    'X-CSRF-TOKEN': window.Laravel.csrfToken,
+    'Accept': 'application/json',
+    'X-Requested-With': 'XMLHttpRequest'
+};
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
