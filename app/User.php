@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 //use Scool\Foundation\User as ScoolUser;
+use Manelgavalda\EnrollmentMobileTest\Notifications\ResetPassword;
 use Spatie\Permission\Traits\HasRoles;
 
 //class User extends ScoolUser
@@ -30,5 +31,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token'
     ];
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPassword($token));
+    }
 }
 

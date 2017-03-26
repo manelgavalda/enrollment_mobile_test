@@ -20,3 +20,4 @@ Reset Password
 
 Thanks, Manel Gavaldà Andreu
 @endcomponent
+@endcomponent
