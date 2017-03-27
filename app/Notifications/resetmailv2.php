@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class ResetPassword extends Notification implements ShouldQueue
+class resetmailv2 extends Notification
 {
     use Queueable;
 
@@ -25,19 +25,26 @@ class ResetPassword extends Notification implements ShouldQueue
         $this->token = $token;
     }
 
-
+    /**
+     * Get the notification's delivery channels.
+     *
+     * @param  mixed  $notifiable
+     * @return array
+     */
     public function via($notifiable)
     {
         return ['mail'];
     }
 
+    /**
+     * Get the mail representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return \Illuminate\Notifications\Messages\MailMessage
+     */
     public function toMail($notifiable)
     {
-        $url = [url('password/reset/' . $this->token)];
-
-        return (new MailMessage)
-        ->markdown('mails.resetpassword',['url' => $url])
-        ->subject('Enrollment Mobile Password Reset');
+        return (new MailMessage)->markdown('mails.resetpass');
     }
 
     /**
@@ -52,6 +59,4 @@ class ResetPassword extends Notification implements ShouldQueue
             //
         ];
     }
-
-
 }
