@@ -33,10 +33,10 @@ class ResetPassword extends Notification implements ShouldQueue
 
     public function toMail($notifiable)
     {
-        $url = [url('password/reset/' . $this->token)];
+        $url = route('password.reset', $this->token);
 
         return (new MailMessage)
-        ->markdown('mails.resetpassword',['url' => $url])
+        ->markdown('mails.resetpassword', ['url' => $url])
         ->subject('Enrollment Mobile Password Reset');
     }
 
