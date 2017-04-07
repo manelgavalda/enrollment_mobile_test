@@ -1,23 +1,12 @@
-@component('mail::header')
+@component('mail::message')
 
-    Reset Password for Enrollment Mobile Application
+    # Hello!
 
-    @component('mail::message')
+    Reset Password for Enrollment Mobile Application. Restore Password Application:
 
-        # Hello!
-
-        Restore Password Application:
-
-        @component('mail::table')
-            |               |               |
-            | ------------- |:-------------:|
-            |               |  From: enrollmentmobile@info.com |
-        @endcomponent
-
-        @component('mail::button', ['url' => $actionUrl])
-            Reset Password
-        @endcomponent
-
-        Thanks, Manel Gavaldà Andreu
+    @component('mail::button', ['url' => $url])
+        Reset Password
     @endcomponent
+
+    Thanks, Manel Gavaldà Andreu
 @endcomponent
