@@ -2,6 +2,7 @@
 
 namespace Manelgavalda\EnrollmentMobileTest\Http\Controllers\Auth;
 
+use Manelgavalda\EnrollmentMobileTest\Events\NewRegisteredUserEvent;
 use Manelgavalda\EnrollmentMobileTest\User;
 use Validator;
 use Manelgavalda\EnrollmentMobileTest\Http\Controllers\Controller;
@@ -77,6 +78,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        event(new NewRegisteredUserEvent());
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

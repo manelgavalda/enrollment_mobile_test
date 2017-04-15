@@ -13,9 +13,8 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
-Vue.component('enrollment', require('./components/Enrollment.vue'));
-Vue.component('enrollments', require('./components/Enrollments.vue'));
+// Vue.component('enrollment', require('./components/Enrollment.vue'));
+// Vue.component('enrollments', require('./components/Enrollments.vue'));
 
 Vue.component(
     'passport-clients',
