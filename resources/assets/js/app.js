@@ -31,6 +31,11 @@ Vue.component(
     require('./components/passport/PersonalAccessTokens.vue')
 );
 
+Vue.component('dashboard-small-box', require('./components/dashboard/SmallBox.vue'))
+Vue.component('dashboard-increase-button', require('./components/dashboard/IncreaseButton.vue'))
+Vue.component('activity-feed', require('./components/dashboard/ActivityFeed.vue'))
+Vue.component('chart', require('./components/dashboard/Chart.vue'))
+
 const app = new Vue({
     el: '#app'
 });

@@ -19,7 +19,7 @@ class AdminUserSeeder extends Seeder
                     "name" => "Manel Gavaldà Andreu",
                     "email" => "manelgavalda@iesebre.com",
                     "password" => bcrypt(env('ADMIN_PWD', '123456'))]
-            );
+            )->assignRole("manage enrollments");
         } catch (\Illuminate\Database\QueryException $exception) {
 
         }

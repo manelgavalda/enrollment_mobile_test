@@ -36,8 +36,11 @@ Vue.http.interceptors.push((request, next) => {
     next();
 });
 
+import Vue2Filters from 'vue2-filters';
+
+window.Vue.use(Vue2Filters);
+
 window.axios = require('axios');
-Vue.prototype.$http = axios;
 
 window.axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
@@ -51,9 +54,11 @@ window.axios.defaults.headers.common = {
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from "laravel-echo"
+import VueEcho from 'vue-echo';
 
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
-// });
+Vue.use(VueEcho, {
+    broadcaster: 'pusher',
+    key: '11dffe0bc4e631e68863',
+    cluster: 'eu',
+    encrypted: true
+});
