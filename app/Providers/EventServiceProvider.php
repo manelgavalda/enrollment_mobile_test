@@ -16,6 +16,10 @@ class EventServiceProvider extends ServiceProvider
         'Manelgavalda\EnrollmentMobileTest\Events\SomeEvent' => [
             'Manelgavalda\EnrollmentMobileTest\Listeners\EventListener',
         ],
+        'Manelgavalda\EnrollmentMobileTest\Events\NewRegisteredUserEvent' => [
+            'Manelgavalda\EnrollmentMobileTest\Listeners\GrantPermissionsListener',
+        ]
+
     ];
 
     /**
