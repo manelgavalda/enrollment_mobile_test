@@ -21,42 +21,42 @@
     export default {
         data: function () {
             return {
-              nameData: '',
-              value: 0
+                nameData: '',
+                value: 0
             }
-          },
-          props: {
+        },
+        props: {
             name: {
-              type: String,
-              required: true
+                type: String,
+                required: true
             }
-          },
+        },
         mounted() {
             this.nameData = this.name
             this.value = this.dashboardValue(this.nameData)
             console.log('Component smallbox mounted.')
             console.log(this.eventName())
-            this.$echo.channel('dashboard').listen(this.eventName(), (payload) => {
-              console.log('Event received!!!!!!!!!')
-              console.log(payload);
-              this.value++
+            this.$echo.channel('enrollment-mobile').listen(this.eventName(), (payload) => {
+                console.log('Event received!!!!!!!!!')
+                console.log(payload);
+                this.value++
             });
         },
         methods: {
             eventName() {
-                return voca.capitalize(pluralize.singular(this.name))+'Created'
+                return "\\Scool\\EnrollmentMobile\\Events\\" +voca.capitalize(pluralize.singular(this.name))+'Created'
             },
             dashboardValue (name) {
                 var component = this
                 axios.get('/dashboard/' + name + '/number')
-                  .then(function (response) {
-                    console.log(response.data)
-                    component.value = response.data
-                      component.name = window.pluralize(component.name)
-                  })
-                  .catch(function (error) {
-                    console.log(error)
-                  });
+                    .then(function (response) {
+                        console.log(response.data)
+                        component.value = response.data
+//                        component.name = window.pluralize(component.name)
+                    })
+                    .catch(function (error) {
+                        console.log(error)
+                    });
             },
         }
     }

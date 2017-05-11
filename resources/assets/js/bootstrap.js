@@ -54,11 +54,13 @@ window.axios.defaults.headers.common = {
  * allows your team to easily build robust real-time web applications.
  */
 
-import VueEcho from 'vue-echo';
+import Echo from 'laravel-echo';
 
-Vue.use(VueEcho, {
+window.Pusher = require('pusher-js');
+
+window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: '11dffe0bc4e631e68863',
+    key: 'dda059974aeff833e6a6',
     cluster: 'eu',
     encrypted: true
 });

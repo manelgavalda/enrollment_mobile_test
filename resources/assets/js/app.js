@@ -36,6 +36,19 @@ Vue.component('dashboard-increase-button', require('./components/dashboard/Incre
 Vue.component('activity-feed', require('./components/dashboard/ActivityFeed.vue'))
 Vue.component('chart', require('./components/dashboard/Chart.vue'))
 
+import Vue2Filters from 'vue2-filters'
+
+window.Vue.use(Vue2Filters)
+
+import VueEcho from 'vue-echo'
+
+Vue.use(VueEcho, {
+    broadcaster: 'pusher',
+    key: 'dda059974aeff833e6a6',
+    cluster: 'eu',
+    encrypted: true
+});
+
 const app = new Vue({
     el: '#app'
 });
