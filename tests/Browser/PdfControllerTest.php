@@ -62,10 +62,13 @@ class PdfControllerTest extends DuskTestCase
 
         $enrollments = $this->createEnrollments(25);
 
+        dump($enrollments[0]->name);
         $this->browse(function (Browser $browser) use ($enrollments){
             $browser->visit('enrollmentspdf/view')
-            ->assertTitle('Enrollments List');
-//            ->assertSee($enrollments[0]->name);
+//            ->pause(500000)
+            ->assertTitle('Enrollments List')
+            ->assertSee($enrollments[0]->name);
+
 
             // Funciona amb css selectors.
 //            $this-assertEquals(3,count($browser->elements('div#enrollments-list table#enrollments-tablelist tr th')));
@@ -73,7 +76,7 @@ class PdfControllerTest extends DuskTestCase
         });
     }
 
-    private function createEnrollments($num = 25)
+    private function createEnrollments($num = null)
     {
         return factory(Enrollment::class, $num)->create();
     }
