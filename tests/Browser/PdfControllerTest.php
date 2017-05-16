@@ -15,6 +15,7 @@ class PdfControllerTest extends DuskTestCase
      * Test enrollments are converted to pdf correctly.
      *
      * @return void
+     * @group failing
      */
     public function test_users_are_converted_to_pdf_correctly()
     {
@@ -27,6 +28,7 @@ class PdfControllerTest extends DuskTestCase
     /**
      * Test user is converted to pdf correctly.
      * @return void
+     * @group failing
      */
     public function test_enrollment_is_converted_to_pdf_correctly()
     {
@@ -39,6 +41,7 @@ class PdfControllerTest extends DuskTestCase
     /**
      * Test user is converted to pdf correctly.
      * @return void
+     * @group failing
      */
     public function test_enrollment_is_shown_correctly()
     {
@@ -53,8 +56,6 @@ class PdfControllerTest extends DuskTestCase
 
     /**
      * Test user is converted to pdf correctly.
-     *
-     * @group failing
      * @return void
      */
     public function test_users_are_shown_correctly()
