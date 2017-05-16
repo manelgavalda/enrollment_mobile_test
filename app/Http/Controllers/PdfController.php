@@ -29,7 +29,8 @@ class PdfController extends Controller
 
     public function enrollments_view()
     {
-        return view('pdf.enrollments');
+        $enrollments = Enrollment::all();
+        return view('pdf.enrollments')->with('enrollments', $enrollments);
     }
 
 }
