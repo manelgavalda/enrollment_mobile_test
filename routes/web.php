@@ -24,6 +24,9 @@ Route::group(['middleware' => 'auth'], function () {
         return view('tokens');
     });
     #adminlte_routes
+    Route::get('enrollment/pdf/{id}', 'PdfController@enrollment');
+
+    Route::get('enrollments/pdf', 'PdfController@enrollments');
 
 
 
