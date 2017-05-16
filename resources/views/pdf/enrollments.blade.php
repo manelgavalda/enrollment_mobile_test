@@ -32,9 +32,9 @@
         </div>
 
         <!-- Table row -->
-        <div class="row">
+        <div class="row" id="enrollments-list">
             <div class="col-xs-12 table-responsive">
-                <table class="table table-striped">
+                <table id="enrollments-tablelist" class="table table-striped">
                     <thead>
                     <tr>
                         <th>Name</th>

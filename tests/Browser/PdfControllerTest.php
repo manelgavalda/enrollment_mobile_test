@@ -71,8 +71,8 @@ class PdfControllerTest extends DuskTestCase
 
 
             // Funciona amb css selectors.
-//            $this-assertEquals(3,count($browser->elements('div#enrollments-list table#enrollments-tablelist tr th')));
-//            $this-assertEquals(20,count($browser->elements('div#enrollments-list table#enrollments-tablelist tr')));
+            $this->assertEquals(3,count($browser->elements('div#enrollments-list table#enrollments-tablelist tr th')));
+            $this->assertEquals(26,count($browser->elements('div#enrollments-list table#enrollments-tablelist tr')));
         });
     }
 
