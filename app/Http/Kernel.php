@@ -31,7 +31,9 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Manelgavalda\EnrollmentMobileTest\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \Barryvdh\Cors\HandleCors::class
+            \Barryvdh\Cors\HandleCors::class,
+            // Passport
+            \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class
         ],
 
         'api' => [
