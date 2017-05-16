@@ -4,6 +4,7 @@ namespace Manelgavalda\EnrollmentMobileTest\Http\Controllers;
 
 use App;
 use Illuminate\Http\Request;
+use View;
 
 /**
  * Class PdfController
@@ -19,7 +20,14 @@ class PdfController extends Controller
     public function enrollment()
     {
         $pdf = App::make('dompdf.wrapper');
-        $pdf->loadHTML('<h1>Hello World</h1>');
-        return $pdf->stream();
+        $view = View::make('pdf.enrollments')->render();
+        $pdf->loadHTML($view);
+        return $pdf->stream('enrollments');
     }
+
+    public function enrollments_view()
+    {
+        return view('pdf.enrollments');
+    }
+
 }
