@@ -23,5 +23,15 @@ class AdminUserSeeder extends Seeder
         } catch (\Illuminate\Database\QueryException $exception) {
 
         }
+
+        try {
+            factory(Manelgavalda\EnrollmentMobileTest\User::class)->create([
+                    "name" => "Normal User",
+                    "email" => "normaluser@iesebre.com",
+                    "password" => bcrypt(env('ADMIN_PWD', '123456'))]
+            );
+        } catch (\Illuminate\Database\QueryException $exception) {
+
+        }
     }
 }

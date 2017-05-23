@@ -2,10 +2,11 @@
 
 namespace Manelgavalda\EnrollmentMobileTest;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Scool\Foundation\User as ScoolUser;
+
+//use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
-//use Scool\Foundation\User as ScoolUser;
 use Manelgavalda\EnrollmentMobileTest\Notifications\ResetPassword;
 use Scool\EnrollmentMobile\Models\Enrollment;
 use Spatie\Permission\Traits\HasRoles;
@@ -15,7 +16,7 @@ use Spatie\Permission\Traits\HasRoles;
  * Class User
  * @package App
  */
-class User extends Authenticatable
+class User extends ScoolUser
 {
     use HasApiTokens, Notifiable, HasRoles;
 
@@ -23,7 +24,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password'
+        'name', 'email', 'password', 'enrollment_id'
     ];
 
     /**
@@ -41,6 +42,11 @@ class User extends Authenticatable
     public function enrollments()
     {
         return $this->hasMany(Enrollment::class);
+    }
+
+    public function person()
+    {
+        return $this->hasOne(Person::class);
     }
 }
 
