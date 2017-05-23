@@ -19,6 +19,8 @@ $factory->define(Manelgavalda\EnrollmentMobileTest\User::class, function (Faker\
         'name'           => $faker->name,
         'email'          => $faker->unique()->safeEmail,
         'password'       => $password ?: $password = bcrypt('secret'),
+        'person_id' => 1,
+        'enrollment_id' => 1,
         //'api_token'      => str_random(60),
         'remember_token' => str_random(10),
 

@@ -2,6 +2,7 @@
 
 namespace Manelgavalda\EnrollmentMobileTest;
 
+use Scool\EnrollmentMobile\Entities\Person;
 use Scool\Foundation\User as ScoolUser;
 
 //use Illuminate\Foundation\Auth\User as Authenticatable;
