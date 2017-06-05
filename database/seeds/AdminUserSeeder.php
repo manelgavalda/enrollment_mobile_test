@@ -33,5 +33,15 @@ class AdminUserSeeder extends Seeder
         } catch (\Illuminate\Database\QueryException $exception) {
 
         }
+
+        try {
+            factory(Manelgavalda\EnrollmentMobileTest\User::class)->create([
+                    "name" => "Mr Admin",
+                    "email" => "admin@iesebre.com",
+                    "password" => bcrypt(env('ADMIN_PWD', '123456'))]
+            )->assignRole("manage enrollments");
+        } catch (\Illuminate\Database\QueryException $exception) {
+
+        }
     }
 }
