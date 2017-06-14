@@ -88,6 +88,9 @@ class EnrollmentsControllerTest extends BrowserKitTest
         $this->assertEquals(count($enrollments),2);
     }
 
+    /*
+     * @group api
+     */
     public function testStore()
     {
         $this->login();
