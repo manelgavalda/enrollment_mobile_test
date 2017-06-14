@@ -35,7 +35,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('adminlte::home');
+        $data = [];
+
+        $data['labels1'] = "['January', 'February', 'March', 'April', 'May', 'June', 'July']";
+        $data['values1'] = "[10, 42, 4, 23, 43, 54]";
+
+        $data['labels2'] = "['January', 'February', 'March', 'April', 'May', 'June', 'July']";
+        $data['values2'] = "[10, 42, 4, 23, 43, 54]";
+        return view('enrollment_mobile::dashboard.dashboard', $data);
     }
   public function mail()
   {

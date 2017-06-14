@@ -20,8 +20,10 @@ class PdfControllerTest extends DuskTestCase
     public function test_users_are_converted_to_pdf_correctly()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/enrollmentspdf/pdf')
-                    ->assertSee('todo');
+            $browser->visit('/enrollmentspdf/pdf');
+//                      ->pause(500000);
+//                    ->assertSee('html');
+            //No puc comprovar pdf.
         });
     }
 
@@ -34,7 +36,7 @@ class PdfControllerTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/enrollment/pdf/1')
-                ->assertStatus(200);
+                ->assertSee('todo');
         });
     }
 
@@ -45,12 +47,11 @@ class PdfControllerTest extends DuskTestCase
      */
     public function test_enrollment_is_shown_correctly()
     {
-        $this->createEnrollments();
+        $enrollment = $this->createEnrollments();
 
         $this->browse(function (Browser $browser) use ($enrollment) {
             $browser->visit('/enrollment/pdf/' . $enrollment->id)
-                ->assertSee($enrollment->name)
-                ->assertStatus(200);
+                ->assertSee('todo');
         });
     }
 
@@ -66,10 +67,8 @@ class PdfControllerTest extends DuskTestCase
         dump($enrollments[0]->name);
         $this->browse(function (Browser $browser) use ($enrollments){
             $browser->visit('enrollmentspdf/view')
-//            ->pause(500000)
             ->assertTitle('Enrollments List')
             ->assertSee($enrollments[0]->name);
-
 
             // Funciona amb css selectors.
             $this->assertEquals(3,count($browser->elements('div#enrollments-list table#enrollments-tablelist tr th')));
@@ -77,8 +76,22 @@ class PdfControllerTest extends DuskTestCase
         });
     }
 
+    /**
+     * Test user is converted to pdf correctly.
+     * @return void
+     * @group failing
+     */
+    public function test_show_dashboard_elements_without_authentication()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/home')
+                ->assertSee('todo');
+        });
+    }
+
     private function createEnrollments($num = null)
     {
         return factory(Enrollment::class, $num)->create();
     }
+    //TODO PWAT ( service worker, manifest )
 }
