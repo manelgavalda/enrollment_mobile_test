@@ -37,7 +37,7 @@
                     labels: this.dataLabels ,
                     datasets: [
                         {
-                            label: "My First dataset",
+                            label: "Enrollments",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: this.color,
