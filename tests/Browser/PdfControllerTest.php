@@ -138,5 +138,4 @@ public function test_can_view_login()
     {
         return factory(Enrollment::class, $num)->create();
     }
-    //TODO PWAT ( service worker, manifest )
 }
