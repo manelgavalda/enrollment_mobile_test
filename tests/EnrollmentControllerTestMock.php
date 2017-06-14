@@ -2,6 +2,8 @@
 
 namespace Tests;
 
+use Mockery;
+
 class EnrollmentControllerTestMock extends BrowserKitTest
 {
     protected $apiResult = '[{

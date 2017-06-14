@@ -3,6 +3,7 @@
 namespace Manelgavalda\EnrollmentMobileTest\Http\Controllers;
 
 use App;
+use Cache;
 use Illuminate\Http\Request;
 use Scool\EnrollmentMobile\Models\Enrollment;
 use View;
@@ -29,8 +30,8 @@ class PdfController extends Controller
 
     public function enrollments_view()
     {
-        $enrollments = Enrollment::all();
-        return view('pdf.enrollments')->with('enrollments', $enrollments);
+        Cache::put('enrollments',Enrollment::all(), 5);
+        return view('pdf.enrollments')->with('enrollments', Cache::get('enrollments'));
     }
 
 }

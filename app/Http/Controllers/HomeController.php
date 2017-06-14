@@ -44,6 +44,6 @@ class HomeController extends Controller
       $message->to($user->email);
       $message->subject('Mailgun Testing');
     });
-    dd('Mail Send Successfully');
+//    dd('Mail Send Successfully');
   }
 }
