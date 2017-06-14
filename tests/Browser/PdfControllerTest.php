@@ -16,7 +16,6 @@ class PdfControllerTest extends DuskTestCase
      * Test enrollments are converted to pdf correctly.
      *
      * @return void
-     * @group failing
      */
     public function test_users_are_converted_to_pdf_correctly()
     {
@@ -31,7 +30,6 @@ class PdfControllerTest extends DuskTestCase
     /**
      * Test user is converted to pdf correctly.
      * @return void
-     * @group failing
      */
     public function test_enrollment_is_converted_to_pdf_correctly()
     {
@@ -44,7 +42,6 @@ class PdfControllerTest extends DuskTestCase
     /**
      * Test user is converted to pdf correctly.
      * @return void
-     * @group failing
      */
     public function test_enrollment_is_shown_correctly()
     {
@@ -90,7 +87,6 @@ public function test_can_view_login()
     /**
      * Test cant view dashboard without login.
      * @return void
-     * @group failing
      */
     public function test_can_view_dashboard_without_login()
     {
@@ -105,7 +101,6 @@ public function test_can_view_login()
     /**
      * Test can view dashboard with login.
      * @return void
-     * @group failing
      */
     public function test_can_view_dashboard_when_login()
     {
