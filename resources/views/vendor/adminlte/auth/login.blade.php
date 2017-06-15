@@ -9,7 +9,7 @@
     <div id="app">
         <div class="login-box">
             <div class="login-logo">
-                <a href="{{ url('/home') }}"><b>Admin</b>LTE</a>
+                <a href="{{ url('/home') }}"><b>Enrollment</b>Mobile</a>
             </div><!-- /.login-logo -->
 
         @if (count($errors) > 0)
@@ -24,6 +24,14 @@
         @endif
 
         <div class="login-box-body">
+        <p>User without privileges:</p>
+            <ul>
+                <li>normaluser@iesebre.com | 123456</li>
+            </ul>
+        <p>User with privileges:</p>
+            <ul>
+                <li>admin@iesebre.com | 123456</li>
+            </ul>
         <p class="login-box-msg"> {{ trans('adminlte_lang::message.siginsession') }} </p>
         <form action="{{ url('/login') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
