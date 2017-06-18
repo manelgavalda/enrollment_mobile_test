@@ -36,6 +36,9 @@ Vue.component('dashboard-increase-button', require('./components/dashboard/Incre
 Vue.component('activity-feed', require('./components/dashboard/ActivityFeed.vue'))
 Vue.component('chart', require('./components/dashboard/Chart.vue'))
 
+Vue.component('enrollments', require('./components/enrollments.vue'))
+Vue.component('enrollment', require('./components/enrollment.vue'))
+
 import Vue2Filters from 'vue2-filters'
 
 window.Vue.use(Vue2Filters)
