@@ -53,5 +53,30 @@ Vue.use(VueEcho, {
 });
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    data: {
+        messages: []
+    },
+
+    created() {
+        Echo.channel('chat')
+            .listen('MessageSent', (e) => {
+            this.messages.push({
+            message: e.message.message,
+            user: e.user
+        });
+    });
+    },
+
+    methods: {
+        addMessage(message) {
+            this.messages.push(message)
+
+            axios.post('/messages', message).then(response => {
+                console.log(response.data)
+        })
+        }
+    }
 });
+

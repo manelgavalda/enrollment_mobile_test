@@ -156,6 +156,7 @@
                     study_id: this.enrollment.study_id
                 }).then((response) => {
                     console.log(response);
+                    this.sendMessage()
                 }, (response) => {
                     sweetAlert("Oops...", "Something went wrong!", "error");
                     console.log(response);
@@ -166,6 +167,13 @@
                 console.log("Deleting enrollment");
                 //Per enviarli al pare.
                 this.$emit('enrollment-deleted',index,id);
+            },
+            sendMessage () {
+                this.$emit('messagesent', {
+                    enrollment: this.enrollment.name,
+                    message: 'Enrollment modified'
+                })
+                this.newMessage = ''
             }
         },
         directives: {

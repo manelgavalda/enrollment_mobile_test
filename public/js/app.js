@@ -28349,7 +28349,33 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_1_vue_echo___default.a, {
 });
 
 var app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    data: {
+        messages: []
+    },
+
+    created: function created() {
+        var _this = this;
+
+        Echo.channel('chat').listen('MessageSent', function (e) {
+            _this.messages.push({
+                message: e.message.message,
+                user: e.user
+            });
+        });
+    },
+
+
+    methods: {
+        addMessage: function addMessage(message) {
+            this.messages.push(message);
+
+            axios.post('/messages', message).then(function (response) {
+                console.log(response.data);
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -29682,6 +29708,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         //Fer peticions al editar.
         editEnrollmentApi: function editEnrollmentApi() {
+            var _this = this;
+
             axios.put(this.uri + '/' + this.enrollment.id, {
                 name: this.enrollment.name,
                 validated: this.enrollment.validated,
@@ -29690,6 +29718,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 study_id: this.enrollment.study_id
             }).then(function (response) {
                 console.log(response);
+                _this.sendMessage();
             }, function (response) {
                 sweetAlert("Oops...", "Something went wrong!", "error");
                 console.log(response);
@@ -29700,6 +29729,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             console.log("Deleting enrollment");
             //Per enviarli al pare.
             this.$emit('enrollment-deleted', index, id);
+        },
+        sendMessage: function sendMessage() {
+            this.$emit('messagesent', {
+                enrollment: this.enrollment.name,
+                message: 'Enrollment modified'
+            });
+            this.newMessage = '';
         }
     },
     directives: {
