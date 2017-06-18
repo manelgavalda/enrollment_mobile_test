@@ -4,7 +4,7 @@
     <tr>
         <!--<td>{{ index + from }}</td>-->
         <td>
-                <span v-if="enrollment.validated === '1'">
+                <span v-if="enrollment.validated == '1'">
                     <input type="checkbox" checked="true" class="flat-red" @click="setValidated('0')">
                 </span>
             <span v-else>
