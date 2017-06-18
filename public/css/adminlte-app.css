@@ -5,7 +5,6 @@
  *   License: Open source - MIT
  *           Please visit http://opensource.org/licenses/MIT for more information
 !*/
-
 /*
  * Core: General Layout Style
  * -------------------------
@@ -250,7 +249,7 @@ a:focus {
   font-family: fontAwesome;
 }
 .main-header .sidebar-toggle:before {
-  content: "\f0c9";
+  content: "\F0C9";
 }
 .main-header .sidebar-toggle:hover {
   color: #fff;
@@ -336,7 +335,7 @@ a:focus {
   margin-right: 5px;
 }
 .content-header > .breadcrumb > li + li:before {
-  content: '>\00a0';
+  content: '>\A0';
 }
 @media (max-width: 991px) {
   .content-header > .breadcrumb {

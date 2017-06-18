@@ -2,7 +2,8 @@
 
 namespace Manelgavalda\EnrollmentMobileTest;
 
-use Scool\EnrollmentMobile\Entities\Person;
+use Scool\EnrollmentMobile\Models\GcmToken;
+use Scool\EnrollmentMobile\Models\Person;
 use Scool\Foundation\User as ScoolUser;
 
 //use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,6 +49,18 @@ class User extends ScoolUser
     public function person()
     {
         return $this->hasOne(Person::class);
+    }
+
+    public function gcmTokens()
+    {
+        return $this->hasMany(GcmToken::class);
+    }
+    /**
+     * @return mixed
+     */
+    public function routeNotificationForGcm()
+    {
+        return $this->gcmTokens->pluck('registration_id')->toArray();
     }
 }
 

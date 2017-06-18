@@ -174,6 +174,8 @@ return [
         Acacha\LaravelSocial\Providers\LaravelSocialServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        NotificationChannels\Gcm\GcmServiceProvider::class,
+        NotificationChannels\OneSignal\OneSignalServiceProvider::class,
 
 
 

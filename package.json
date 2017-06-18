@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js,.vue resources/assets/js"
   },
   "devDependencies": {
-    "acacha-forms": "^0.1.0",
+    "acacha-forms": "^0.1.4",
     "admin-lte": "^2.3.11",
     "axios": "^0.15.3",
     "bootstrap-less": "^3.3.7",
@@ -38,10 +38,12 @@
   "dependencies": {
     "axios": "^0.15.3",
     "chart.js": "^2.5.0",
+    "node-sass": "^4.5.3",
     "pluralize": "^4.0.0",
     "sweetalert2": "^6.4.2",
     "vue-echo": "^1.0.1",
-    "vue2-filters": "^0.1.9"
+    "vue2-filters": "^0.1.9",
+    "webpack": "^2.6.1"
   },
   "name": "enrollment_mobile_test",
   "description": "Enrollment Mobile Project",
